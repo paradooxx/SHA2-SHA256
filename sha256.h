@@ -11,7 +11,7 @@
 #define uint uint32_t
 #define uchar unsigned char  //same as above
 
-//these macros may be little tedious to understand so i have coverted them to function below
+//these macros may be little tedious to understand so i have converted them to function below
 
 /*#define DBL_INT_ADD(a,b,c) if (a > 0xffffffff - (c)) ++b; a += c;
 #define ROTLEFT(a,b) (((a) << (b)) | ((a) >> (32-(b))))
