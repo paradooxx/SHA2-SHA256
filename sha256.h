@@ -1,5 +1,5 @@
-#ifndef _SHA256
-#define _SHA256
+#ifndef _SHA256_H
+#define _SHA256_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -106,4 +106,4 @@ typedef struct
     uint state[8];
 } sha256_ctx;
 
-#endif /* _SHA256 */
+#endif /* _SHA256_H */
