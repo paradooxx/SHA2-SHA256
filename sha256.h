@@ -13,7 +13,7 @@
 
 //these macros may be little tedious to understand so i have converted them to function below
 
-/*#define DBL_INT_ADD(a,b,c) if (a > 0xffffffff - (c)) ++b; a += c;
+/*#define ADD(a,b,c) if (a > 0xffffffff - (c)) ++b; a += c;
 #define ROTLEFT(a,b) (((a) << (b)) | ((a) >> (32-(b))))
 #define ROTRIGHT(a,b) (((a) >> (b)) | ((a) << (32-(b))))
 
