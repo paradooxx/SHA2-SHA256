@@ -1,4 +1,4 @@
-#ifndef _SHA256_H
+#ifndef _SHA256_h
 #define _SHA256_H
 
 #include <stdio.h>
@@ -11,7 +11,7 @@
 #define uint uint32_t
 #define uchar unsigned char  //same as above
 
-//these macros may be little tedious to understand so i have converted them to function below
+//these macros may be little tedious to understand so i have coverted them to function below
 
 /*#define ADD(a,b,c) if (a > 0xffffffff - (c)) ++b; a += c;
 #define ROTLEFT(a,b) (((a) << (b)) | ((a) >> (32-(b))))
@@ -29,7 +29,7 @@
 //just some bitwise operations
 void ADD(uint a, uint b, uint c)
 {
-    if (a > 0xffffffff - (c))
+    if (a > 0xffffffff - c)
     {
         ++b;
         a += c;
@@ -48,12 +48,12 @@ uint ROTRIGHT(uint a, uint b)
 
 uint CH(uint x, uint y, uint z)
 {
-    return (((x) & (y)) ^ (~(x) & (z)));
+    return ((x & y) ^ (~x & z));
 }
 
 uint MAJ(uint x, uint y, uint z)
 {
-    return (((x) & (y)) ^ ((x) & (z)) ^ ((y) & (z)));
+    return ((x & y) ^ (x & z) ^ (y & z));
 }
 
 uint EP0(uint x)
@@ -68,15 +68,14 @@ uint EP1(uint x)
 
 uint SIG0(uint x)
 {
-    return (ROTRIGHT(x, 7) ^ ROTRIGHT(x, 18) ^ ((x) >> 3));
+    return (ROTRIGHT(x, 7) ^ ROTRIGHT(x, 18) ^ (x >> 3));
 }
 
 uint SIG1(uint x)
 {
-    return (ROTRIGHT(x, 17) ^ ROTRIGHT(x, 19) ^ ((x) >> 10));
+    return (ROTRIGHT(x, 17) ^ ROTRIGHT(x, 19) ^ (x >> 10));
 }
 
-//array of round constants
 const uint k[64] = {
     0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
     0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,
