@@ -16,7 +16,7 @@ void sha256_transform(sha256_ctx *ctx, uchar *data)
 
     for(i = 0 ; i < 64 ; ++i)
     {
-        t1 = h + EP1(x[4]) + CH(x[4], x[5], x[6]) + k[i] + m[i];
+        t1 = x[7] + EP1(x[4]) + CH(x[4], x[5], x[6]) + k[i] + m[i];
         t2 = EP0(x[0]) + MAJ(x[0], x[1], x[2]);
         x[7] = x[6];
         x[6] = x[5];
