@@ -1,4 +1,4 @@
-# SHA-2-SHA-256
+# SHA2/SHA256
 This is the C implementation of SHA-2/SHA-256 hashing algorithm.
 
 SHA-2 (Secure Hash Algorithm 2) is a set of cryptographic hash functions designed by the United States National Security Agency (NSA) and first published in 2001. They are built using the Merkle–Damgård construction, from a one-way compression function itself built using the Davies–Meyer structure from a specialized block cipher.
