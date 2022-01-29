@@ -12,5 +12,5 @@ As of 2011, the best public attacks break preimage resistance for 52 out of 64 r
 This implementation is mixture of other code reference, refernce from wikipedia algorithm and my some modifications I have made some changes regarding macros and code implementation of assigning hash values. 
 
 
-Output:
+Output(Input string : "Paras") :
 ![image](https://user-images.githubusercontent.com/55276059/151669651-ab18f232-a7ad-4614-a89d-af6719827953.png)
