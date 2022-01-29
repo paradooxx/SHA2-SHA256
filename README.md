@@ -9,7 +9,7 @@ SHA-2 was first published by the National Institute of Standards and Technology 
 
 As of 2011, the best public attacks break preimage resistance for 52 out of 64 rounds of SHA-256 or 57 out of 80 rounds of SHA-512, and collision resistance for 46 out of 64 rounds of SHA-256.(Source: Wikipedia)
 
-This implementation is mixture of other code reference, refernce from wikipedia algorithm and my some modifications I have made some changes regarding macros and code implementation of assigning hash values. 
+This implementation is mixture of other code reference, reference from wikipedia algorithm and my some modifications. I have made some changes regarding macros and code implementation of assigning hash values. 
 
 
 Output(Input string : "Paras") :
